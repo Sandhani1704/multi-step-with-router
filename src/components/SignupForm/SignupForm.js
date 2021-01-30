@@ -6,20 +6,23 @@ import ProfileForm from '../ProfileForm/ProfileForm';
 import SocialForm from '../SocialForm/SocialForm';
 import Review from '../Review/Review';
 import StepLinks from '../StepLinks/StepLinks';
+import SignupFormProvider from '../SignupFormContext/SignupFormContext';
 
 function SignupForm() {
-    return (
+    
 
-        <div className="signup-form">
+    return (
+        <SignupFormProvider>
+        <>
             <StepLinks />
             <Switch>
-            <Route path='/' exact component={ProfileForm} />
-            <Route path='/social' component={SocialForm} />
-            <Route path='/review' component={Review} />
-            
-            </Switch>
-        </div>
+                <Route path='/' exact component={ProfileForm}/>
+                <Route path='/social' component={SocialForm} />
+                <Route path='/review' component={Review} />
 
+            </Switch>
+        </>
+</SignupFormProvider>
     );
 }
 

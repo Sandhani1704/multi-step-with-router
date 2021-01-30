@@ -1,0 +1,20 @@
+.step-links {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.step-link {
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    color: black;
+    margin-right: 30px;
+}
+
+.step-link:last-child {
+    margin-right: 0;
+}
