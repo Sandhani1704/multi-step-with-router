@@ -3,6 +3,8 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useSignupForm } from '../SignupFormContext/SignupFormContext'
+import { motion } from 'framer-motion';
+import { Animator } from "../Animator";
 
 
 function ProfileForm() {
@@ -18,6 +20,7 @@ function ProfileForm() {
 
     
     return (
+        <Animator>
         <form className="signup-form" onSubmit={handleSubmit(onSubmit)} noValidate>
             <h2 className="signup-form__title">Tell us about yourself</h2>
             <input className="signup-form__input" type='text' name='name' placeholder='What is your name?'
@@ -32,6 +35,7 @@ function ProfileForm() {
             <p>{errors.email && 'A valid email is required.'}</p>
             <input className="signup-form__submit" type='submit' value='next' />
         </form>
+        </Animator>
     );
 }
 

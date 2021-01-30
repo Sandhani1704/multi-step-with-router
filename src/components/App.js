@@ -9,9 +9,10 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-        <SignupForm />
+          <SignupForm />
         </Switch>
       </div>
+
     </Router>
   );
 }

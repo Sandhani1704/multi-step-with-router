@@ -1,7 +1,7 @@
 import './Review.css';
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { useSignupForm } from '../SignupFormContext/SignupFormContext'
+import { useSignupForm } from '../SignupFormContext/SignupFormContext';
+import { Animator } from "../Animator";
 
 
 function Review() {
@@ -13,6 +13,7 @@ function Review() {
     }
 
     return (
+        <Animator>
 
         <form className="signup-form" onSubmit={handleSubmit} >
             <h2 className="signup-form__title">Review all your info</h2>
@@ -22,6 +23,7 @@ function Review() {
             <p className="review-info"><strong>Facebook</strong>: {social.facebook}</p>
             <input className="signup-form__submit" type='submit' value='submit all info' />
         </form>
+        </Animator>
 
 
     );
