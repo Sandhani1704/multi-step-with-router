@@ -5,11 +5,13 @@ import { Animator } from "../Animator";
 
 
 function Review() {
-    const { profile, social } = useSignupForm();
+    const { profile, social, setProfile, setSocial } = useSignupForm();
 
     function handleSubmit(e) {
         e.preventDefault()
         alert('you are submiting')
+        setProfile({});
+        setSocial({});
     }
 
     return (
